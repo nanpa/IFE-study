@@ -4,19 +4,26 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
  	<style type="text/css">
- 	#nav {float:right}
- 	li {
-    display: inline;
-    margin-left: 20px;
-	}
- 		</style>
+ 	#header {background: #333}
+ 	#header ul {float:right}
+ 	#header ul li {display:inline}
+ 	#header a {color: white}
+ 	.divbox {
+  			border: 1px solid #ccc;
+  			background-color: white;
+  			margin-top: 20px;
+  			margin-bottom: 20px;
+  			padding: 10px;
+  			box-shadow: 3px 3px 3px #666;
+			}
+ 	</style>
 </head>
 <body>
 <header>
-<div>
-	<img src="https://www.baidu.com/img/baidu_jgylogo3.gif">
-	<ul id="nav">
-		<li display=inline><a href="www.baidu.com">导航链接1</a></li>
+<div id="header">
+	<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/logo_white.png"  width="10%" alt="">
+	<ul>
+		<li><a href="www.baidu.com">导航链接1</a></li>
 		<li><a href="www.baidu.com">导航链接2</a></li>
 		<li><a href="www.baidu.com">导航链接3</a></li>
 		<li><a href="www.baidu.com">导航链接4</a></li>
@@ -24,6 +31,7 @@
 </div>
 </header>
 <!-- H1,h2,h3标签表示标题大小 -->
+<div class="divbox">
 <h1>网站一级标题，使用H1标签</h1>
 <ul>
 <!-- 在标签<a> 中使用了href属性来描述链接的地址 -->
@@ -31,11 +39,14 @@
 	<li><a href="www.w3cschool.cc">w3cschool菜鸟教程</a></li>
 	<li><a href="https://www.zhihu.com/question/22689579">Web相关名词通俗解释</a></li>
 </ul>
+</div>
+<div class="divbox">
 <h2>文章一级标题，使用H2标签</h2>
 <h2>文章二级标题</h2>
 <p>文章作者 文章发表时间</p>
 <p>这是一个很长的段落，很长很长非常长。这是一个很长的段落，很长很长非常长。这是一个很长的段落，很长很长非常长。这是一个很长的段落，很长很长非常长。<br>换行了<br>使用这是一个很长的段落，很长很长非常长。这是一个很长的段落，很长很长非常长。这是一个很长的段落，很长很长非常长。这是一个很长的段落，很长很长非常长。这是一个很长的段落，很长很长非常长。这是一个很长的段落，很长很长非常长。<a href="http://www.baidu.com/">这个链接可以到百度</a>这是一个很长的段落，很长很长非常长。这是一个很长的段落，很长很长非常长。这是一个很长的段落，很长很长非常长。</p>
 <img src="http://a.hiphotos.baidu.com/baike/w%3D268/sign=260a3c649c510fb378197091e131c893/728da9773912b31b7096bff48418367adbb4e171.jpg">
+</div>
 <h2>另一篇文章一级标题</h2>
 <h2>文章二级标题</h2>
 <p>文章作者 文章发表时间</p>
