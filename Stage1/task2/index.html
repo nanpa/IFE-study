@@ -4,9 +4,15 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
  	<style type="text/css">
- 	#header {background: yellow}
- 	#header ul {float:right}
- 	#header ul li {display:inline}
+ 	body {font-family: 微软雅黑;}
+ 	#header {background: #444444;
+ 	}
+ 	#header ul {
+ 			float:right;
+ 			margin-right: 50px;
+ 			margin-top: 25px;
+ 	}
+ 	#header ul li {display:inline-block;}
  	#header a {color: white}
  	.divbox {
  	  			border: 1px solid #ccc;
@@ -14,10 +20,7 @@
  	  			margin: 20px;
  	  			padding: 20px;
  	  			box-shadow: 3px 3px 3px #666;
- 				}
-	.content {
-		font-family: "微软雅黑"
-	}
+ 	}
 	.content h3{
 		color: #444444
 	}
@@ -43,10 +46,10 @@
 		padding: 10px;
 		list-style:none;
 	}
-	 .imgpreview img{
+	.imgpreview img{
 		max-width: 150px;
-		margin: 0px; 
-	} 
+		margin: 0px;
+	}
 	.tab table{
 		border-collapse: collapse;
 		width: 100%;
@@ -65,6 +68,42 @@
 	#totaltab td{
 		background-color: #aaaaaa;
 		font-weight: bold;
+	}
+	.formtab td:first-child{
+		text-align: right;
+	}
+	table.formtab tr td{
+		border: 0px;
+	}
+	.FormElementStyleLeft label {
+		float: left;
+		width: 30%;
+		text-align: right;
+	}
+	.FormElementStyleRight p{
+		margin-left: 30%;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		color: #dddddd;
+		
+	}
+	button {
+		text-align:center;
+		background-color: #0066ff;
+		width: 100%;
+		height: 50px;
+		font-size: 14pt;
+		color: white;
+		border-radius: 15px;
+	}
+	footer {
+		text-align: center;
+		background-color: #444444;
+		color: white;
+		height: 50px;
+	}
+	footer p{
+		padding-top: 10px;
 	}
  	</style>
 </head>
@@ -137,7 +176,7 @@
 		<tr>
 		<!-- tr标签表示一行 -->
 		<!-- td标签表示行内的单元格 -->
-		<!-- 标签表示表头 -->
+		<!-- th标签表示表头 -->
 			<th>表头1行1</th>
 			<th>表头1行2</th>
 			<th>表头1行3</th>
@@ -163,41 +202,48 @@
 		</tr>
 	</table>
 </div>
-<div class="divbox content">
-<h2>这里以后是一个侧栏，这是侧栏的标题</h2>
-<h2>侧栏注册窗口标题</h2>
-	<form>
-		<p>请输入邮箱地址：<input type="email" placeholder="这是一个文本输入框"></input></p>
-		<!-- placeholder 属性规定可描述输入字段预期值的简短的提示信息（比如：一个样本值或者预期格式的短描述）。
-		该提示会在用户输入值之前显示在输入字段中。
-		注意：placeholder 属性是html5适用于下面的 input 类型：text、search、url、tel、email 和 password。 -->
-		<p>邮箱地址请按要求输入</p>
-		<p>请输入密码：
-			<input type="password" placeholder="这是一个文本输入框"></input>请重复输入密码：<input type="password" placeholder="这是一个文本输入框"></input>
-		</p>
-		<p>密码请为6-16位英文数字</p>
-		<p>性别：<!-- 单选框使用radio属性 -->
-			<input type="radio" name="sex" value="male">男</input>
+<aside>
+	<div class="divbox">
+		<h2 style="border-left: 4px solid #dddddd;padding-left: 10px">这里以后是一个侧栏，这是侧栏的标题</h2>
+		<form action="" class="FormElementStyleLeft FormElementStyleRight">
+			<label>请输入邮箱地址：</label>
+			<input type="email" placeholder="这是一个文本输入框"></input>
+				<!-- placeholder 属性规定可描述输入字段预期值的简短的提示信息（比如：一个样本值或者预期格式的短描述）。
+				该提示会在用户输入值之前显示在输入字段中。
+				注意：placeholder 属性是html5适用于下面的 input 类型：text、search、url、tel、email 和 password。 -->
+			<p>邮箱地址请按要求输入</p>
+			<label>请输入密码：</label>
+			<input type="password" placeholder="这是一个文本输入框"></input><br>
+			<label>请重复输入密码：</label>
+			<input type="password" placeholder="这是一个文本输入框"></input>
+			<p>密码请为6-16位英文数字</p>
+			<label>性别：</label><!-- 单选框使用radio属性 -->
+			<input type="radio" name="sex" value="male" checked="checked">男</input>
 			<input type="radio" name="sex" value="female">女</input>
-			城市：<!-- <select> 元素用来创建下拉列表。<select> 元素中的 <option> 标签定义了列表中的可用选项 -->
+			<br>
+			<label>城市：<!-- <select> 元素用来创建下拉列表。<select> 元素中的 <option> 标签定义了列表中的可用选项 --></label>
 			<select>
-			<option>北京</option>
-			<option>重庆</option>
-			<option>上海</option>
-			<option>深圳</option>
+				<option selected="selected">北京</option>
+				<option>重庆</option>
+				<option>上海</option>
+				<option>深圳</option>
 			</select>
-			爱好：<!-- 多选框使用checkbox属性 -->
+			<br>
+			<label>爱好：</label><!-- 多选框使用checkbox属性 -->
 			<input type="checkbox" name="interest" value="sport">运动</input>
 			<input type="checkbox" name="interest" value="art">艺术</input>
 			<input type="checkbox" name="interest" value="science">科学</input>
-			个人描述：<!-- 使用<textarea>标签输入多行文本 -->
-			<textarea placeholder="这是一个多行文本框"></textarea>
-		<!-- 提交按钮使用submit -->
-		<input type="submit" value="确认提交"></input>
-		</p>
-	</form>
-</div>
-<p>&copy版权所有</p>
+			<br>
+			<label>个人描述：</label><!-- 使用<textarea>标签输入多行文本 -->
+			<textarea placeholder="这是一个多行文本框" rows="10" cols="100%"></textarea>
+			<!-- 提交按钮使用submit -->
+			<button type="submit">确认提交</button>
+		</form>
+	</div>
+</aside>
+<footer>
+	<p>&copy版权所有</p>
+</footer>
 </body>
 
 </html> 
