@@ -26,12 +26,11 @@
  	.wrap {
 		background-color: #ccc;
 		width: 100%;
-		position: relative;
 		overflow: hidden;
  	}
  	.leftbox {
-		/*float: left;*/
-		/*width: 600px;*/
+		margin-right: 450px;
+		margin-left: 10px;
  	}
  	.content {
  		background-color: white;
@@ -107,11 +106,11 @@
 	}
 	.FormElementStyleLeft label {
 		float: left;
-		width: 30%;
+		width: 40%;
 		text-align: right;
 	}
 	.FormElementStyleRight p{
-		margin-left: 30%;
+		margin-left: 40%;
 		margin-top: -15px;
 		margin-bottom: 5px;
 		color: #888;
@@ -126,12 +125,10 @@
 		border-radius: 15px;
 	}
 	.rightbox {
-		position: absolute;
-		right: 0;
-		top: 0;
-		background-color: red;
+		float: right;
+		background-color: white;
  		border: 1px solid #999;
- 		margin: 20px;
+ 		margin: 20px 20px 0px 0px;
  	  	padding: 20px;
  	  	box-shadow: 3px 3px 3px #666;
  	  	width: 400px;
@@ -163,6 +160,43 @@
 
 <!-- H1,h2,h3标签表示标题大小 -->
 <div class="wrap">
+	<div class="rightbox">
+		<h2 style="border-left: 4px solid #dddddd;padding-left: 10px">这里以后是一个侧栏，这是侧栏的标题</h2>
+		<form action="" class="FormElementStyleLeft FormElementStyleRight">
+			<label>请输入邮箱地址：</label>
+			<input type="email" placeholder="这是一个文本输入框"></input>
+						<!-- placeholder 属性规定可描述输入字段预期值的简短的提示信息（比如：一个样本值或者预期格式的短描述）。
+						该提示会在用户输入值之前显示在输入字段中。
+						注意：placeholder 属性是html5适用于下面的 input 类型：text、search、url、tel、email 和 password。 -->
+			<p>邮箱地址请按要求输入</p>
+			<label>请输入密码：</label>
+			<input type="password" placeholder="这是一个文本输入框"></input><br>
+			<label>请重复输入密码：</label>
+			<input type="password" placeholder="这是一个文本输入框"></input>
+			<p>密码请为6-16位英文数字</p>
+			<label>性别：</label><!-- 单选框使用radio属性 -->
+			<input type="radio" name="sex" value="male" checked="checked">男</input>
+			<input type="radio" name="sex" value="female">女</input>
+			<br>
+			<label>城市：<!-- <select> 元素用来创建下拉列表。<select> 元素中的 <option> 标签定义了列表中的可用选项 --></label>
+			<select>
+				<option selected="selected">北京</option>
+				<option>重庆</option>
+				<option>上海</option>
+				<option>深圳</option>
+			</select>
+			<br>
+			<label>爱好：</label><!-- 多选框使用checkbox属性 -->
+			<input type="checkbox" name="interest" value="sport">运动</input>
+			<input type="checkbox" name="interest" value="art">艺术</input>
+			<input type="checkbox" name="interest" value="science">科学</input>
+			<br>
+			<label>个人描述：</label><!-- 使用<textarea>标签输入多行文本 -->
+			<textarea placeholder="这是一个多行文本框"></textarea>
+				<!-- 提交按钮使用submit -->
+			<button type="submit">确认提交</button>
+		</form>
+	</div>
 	<div class="leftbox">
 		<div class="content">
 		<h1>网站一级标题，使用H1标签</h1>
@@ -247,44 +281,8 @@
 			</table>
 		</div>
 	</div>
-		<div class="rightbox">
-			<h2 style="border-left: 4px solid #dddddd;padding-left: 10px">这里以后是一个侧栏，这是侧栏的标题</h2>
-			<form action="" class="FormElementStyleLeft FormElementStyleRight">
-					<label>请输入邮箱地址：</label>
-					<input type="email" placeholder="这是一个文本输入框"></input>
-						<!-- placeholder 属性规定可描述输入字段预期值的简短的提示信息（比如：一个样本值或者预期格式的短描述）。
-						该提示会在用户输入值之前显示在输入字段中。
-						注意：placeholder 属性是html5适用于下面的 input 类型：text、search、url、tel、email 和 password。 -->
-					<p>邮箱地址请按要求输入</p>
-					<label>请输入密码：</label>
-					<input type="password" placeholder="这是一个文本输入框"></input><br>
-					<label>请重复输入密码：</label>
-					<input type="password" placeholder="这是一个文本输入框"></input>
-					<p>密码请为6-16位英文数字</p>
-					<label>性别：</label><!-- 单选框使用radio属性 -->
-					<input type="radio" name="sex" value="male" checked="checked">男</input>
-					<input type="radio" name="sex" value="female">女</input>
-					<br>
-					<label>城市：<!-- <select> 元素用来创建下拉列表。<select> 元素中的 <option> 标签定义了列表中的可用选项 --></label>
-					<select>
-						<option selected="selected">北京</option>
-						<option>重庆</option>
-						<option>上海</option>
-						<option>深圳</option>
-					</select>
-					<br>
-					<label>爱好：</label><!-- 多选框使用checkbox属性 -->
-					<input type="checkbox" name="interest" value="sport">运动</input>
-					<input type="checkbox" name="interest" value="art">艺术</input>
-					<input type="checkbox" name="interest" value="science">科学</input>
-					<br>
-					<label>个人描述：</label><!-- 使用<textarea>标签输入多行文本 -->
-					<textarea placeholder="这是一个多行文本框"></textarea>
-					<!-- 提交按钮使用submit -->
-					<button type="submit">确认提交</button>
-			</form>
-		</div>
-	</div>
+	
+</div>
 	<footer>
 		<p>&copy版权所有</p>
 	</footer>
