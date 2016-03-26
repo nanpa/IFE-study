@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>百度前端学院task6</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0
+        }
+        
+        hr {
+            width: 893px;
+            height: 1px;
+            background-color: #938e8c;
+        }
+        
+        #mainbody {
+            width: 893px;
+            margin: 0 auto;
+        }
+        
+        #RectangleRed {
+            border: 1px solid #dc5d5c;
+            width: 109px;
+            height: 60px;
+            background-color: #dc5d5c
+        }
+        
+        #date {
+            font-weight: bold;
+            float: right;
+            right: 0;
+            line-height: 20px;
+            color: #dc5d5c;
+            margin: 40px 0px 0px 0px;
+        }
+        
+        #logo {
+            font-weight: bold;
+            float: left;
+            line-height: 20px;
+            color: white;
+            margin: 40px 0px 0px 0px;
+        }
+        
+        #header {
+            width: 100%;
+            overflow: hidden;
+        }
+        
+        #part1 {
+            width: 100%;
+            margin-top: 36px;
+            overflow: hidden;
+        }
+        
+        .RectangleOnImg {
+            width: 191px;
+            height: 301px;
+            opacity: 0.4;
+        }
+        
+        #img1wrap {
+            width: 641px;
+            height: 301px;
+            background: url(img/1.png);
+        }
+        
+        .green {
+            background-color: green;
+            float: left;
+        }
+        
+        .red {
+            background-color: red;
+            float: right;
+        }
+        
+        #UpRightText {
+            width: 203px;
+            float: right;
+            right: 100px;
+        }
+        
+        #UpRightText h2 {
+            font-family: 微软雅黑;
+            font-size: 14pt;
+        }
+        
+        #UpRightText h2:first-letter {
+            font-size: 200%;
+        }
+        
+        #UpRightText h6 {
+            color: #666;
+            font-family: 楷体;
+            font-style: italic;
+        }
+        
+        #UpRightText h1 {
+            font-family: 微软雅黑;
+            font-style: italic;
+            font-size: 100px;
+            color: #76b86b;
+            line-height: 95px;
+            margin: 0 auto;
+        }
+        
+        #DownRightTextWrap {
+            position: relative;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #DownRightTextWrap p{
+            font-size: 80px;
+        }
+        #DownRightTextWrap h3{
+            font-family: 微软雅黑;
+            font-size: 70px;
+            color: #cc8091
+        }
+        #DownRightText {
+            position: absolute;
+            right: 0px;
+            top: 25px;
+        }
+        #DownRightText span{
+            font-size: 30px;
+            color: #cc8091;
+        }
+        #DownRightText p{
+            font-size:14px;
+            color: #231815;
+        }
+        #part2 {
+            width: 641px;
+            margin-top: 36px;
+            /*background-color: blue;*/
+            overflow:hidden;
+        }
+        #part2left {
+            max-width: 40%;
+            float: left;
+            /*background-color: red;*/
+        }
+        #part2left h3{
+            text-decoration: underline;
+            color:green;
+        }
+        #part2mid {
+            max-width: 30%;
+            margin: 0 206px 0 276px;
+        }
+        #part2mid h3{
+            text-decoration:underline;
+            color:#d2994f;
+        }
+        #part2right {
+            max-width: 30%;
+            float: right;
+        }
+        #part2right h3{
+            text-decoration:underline;
+            color:#cc8091;
+        }
+        #part3 {
+            width: 100%;
+            max-height: 680px;
+            position: relative;
+            margin-top: 36px;
+            font-family: 微软雅黑;
+        }
+        
+        #part3left {
+            width: 415px;
+            overflow: hidden;
+        }
+        #part3left h2{
+            color: #11456b;
+            font-size: 30px;
+        }
+        #part3left span{
+            color: #f5e327;
+            font-style: italic;
+            font-size: 2em;
+        }
+        #part3leftdownbigtext {
+            font-size:3em;
+            color:#f5e327;
+            float: left;
+            margin-right: 10px;
+
+        }
+        img.float_right {
+            width: 167px;
+            height: 288px;
+            float: right;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        #part3upright {
+            width: 458px;
+            height: 257px;
+            background-image: url(img/2.png);
+            position: absolute;
+            right: 0;
+            top: 20px;
+        }
+        
+        #part3downright {
+            width: 458px;
+            height: 318px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin-top: 30px;
+            background-color: #eeedd6;
+        }
+        p.boxongimg{
+            width: 458px;
+            height: 60px;
+            background-color: #040000;
+            opacity: 0.4;
+            margin-top: 197px;
+        }
+        h2.floattext {
+            position: absolute;
+            top: 210px;
+            left: 30px;
+            color: white;
+            z-index: 10;
+        }
+        #line {
+            border-left: 3px solid #72b16a;
+            height: 50px;
+            position: absolute;
+            top: 203px;
+            left: 20px;
+            z-index: 9;
+        }
+        p.floattext {
+            position: absolute;
+            top: 215px;
+            left: 140px;
+            z-index: 8;
+            color: #72b16a;
+            font-style: italic;
+        }
+        ul.float{
+            position: absolute;
+            top: 30px;
+            left: 80px;
+            /*z-index: 7;*/
+        }
+        p.redbox{
+            width:260px;
+            height: 160px;
+            background-color: red;
+            position: absolute;
+            top: 158px;
+            opacity: 0.4;
+        }
+        h2.float{
+            position: absolute;
+            top: 180px;
+            left: 20px;
+            color: white;
+            font-size: 6em;
+        }
+        #line2{
+            border-left: 3px solid #fff;
+            height: 100px;
+            position: absolute;
+            top: 195px;
+            left: 80px;
+            /*z-index: 6;*/
+        }
+        h3.float{
+            position: absolute;
+            top: 220px;
+            left: 90px;
+            color: white;
+            font-style: italic;
+        }
+        p.bigtext{
+            font-size: 4em;
+            color: #d45d5c;
+            position: absolute;
+            top: 150px;
+            left: 230px;
+        }
+        div.lasttext{
+            width: 160px;
+            color: #000;
+            position: absolute;
+            top: 180px;
+            right: 10px;
+        }
+        p.bigtext2{
+            font-size: 4em;
+            color: #d45d5c;
+            position: absolute;
+            top: 225px;
+            right: 4px;
+        }
+        #floot h2{
+            color: #d45d5c;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainbody">
+        <div id="header">
+            <p id="logo">ife.baidu.com</p>
+            <p id="date">2016.03</p>
+            <h1 id="RectangleRed"></h1>
+            <hr>
+        </div>
+        <div id="part1">
+            <div>
+                <div id="UpRightText">
+                    <h2>ABOUT</h2>
+                    <h2>TECHNOLOGE</h2>
+                    <h6>About technologe About technologe About technologe</h6>
+                    <h1>700</h1>
+                    <div id="DownRightTextWrap">
+                        <div>
+                            <h3>3.2</h3>
+                        </div>
+                        <div id="DownRightText">
+                            <p><span>css</span><br>csscsccsscsss</p>
+                         </div>
+                    </div>
+                </div>
+                <div id="img1wrap">
+                    <p class="RectangleOnImg green"></p>
+                    <p class="RectangleOnImg red"></p>
+                </div>
+            </div>
+        </div>
+        <div id="part2">
+                <div id="part2left">
+                    <h3>what</h3>
+                    <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+                </div>
+                 <div id="part2right">
+                    <h3>how</h3>
+                    <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+                </div>
+                <div id="part2mid">
+                    <h3>when</h3>
+                    <p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+                </div>
+        </div>
+        <div id="part3">
+                <div id="part3left">
+                    <h2><span>THE</span> TECHNOLGE<br> OF FORNT<br>前端技术领域</h2>
+                    <hr>
+                    <div id="part3leftdownbigtext">
+                        <h1>前</h1>
+                    </div>
+                     <div id="part3leftdownimg">
+                    </div>
+                    <div id="part3leftdowncontent">
+                        <p>端前端前端前端前端前端前端前端前端前端前端前端前端前端端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端<img class="float_right"src="img/3.png">端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端。<br>&nbsp;&nbsp;&nbsp;&nbsp;前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端。</p>
+                    </div>
+                </div>
+                <div id="part3upright">
+                    <h2 class="floattext">前端技术</h2>
+                    <p id="line"></p>
+                    <p class="floattext">前端技术前端技术</p>
+                    <p class="boxongimg"></p>
+                </div>
+                <div id="part3downright">
+                    <ul class="float">
+                        <li>前端前端前端前端前端..................前端</li>
+                        <li>前端前端前端前端前端..................前端</li>
+                        <li>前端前端前..................前端</li>
+                    </ul>
+                    <p class="redbox"></p>
+                    <h2 class="float">0</h2>
+                    <p id="line2"></p>
+                    <h3 class="float">ONE TWO<br> THREE FOUR FIVE</h3>
+                    <p class="bigtext">“</p>
+                    <div class="lasttext">我是闲的有多蛋疼，明明可以切图的我全部用css弄出来了，代码看的头都要炸了。</div>
+                    <p class="bigtext2">”</p>
+                </div>
+        </div>
+            <div id="floot">
+                <hr>
+                <h2>ife.baidu.com</h2>
+            </div>
+        </div>
+</body>
+
+</html>
